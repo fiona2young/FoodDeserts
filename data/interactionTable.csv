@@ -1,0 +1,16 @@
+CurrentState,KeyTyped,KeyCode,MouseEvent,MapDirection,NextState
+Splash,,,mouseReleased,,Instructions
+Instructions,z,,,,Learning
+Learning,,,,E,Learning2
+Learning2,,,,E,Learning3
+Learning3,,,,E,SolutionSelect
+SolutionSelect,,,,E,CGardens
+CGardens,,,,N,CGardens2
+CGardens,,,,E,CGardens3
+CGardens2,,,,E,CGardens4
+CGardens2,,,,S,CGardens
+CGardens3,,,,N,CGardens4
+CGardens3,,,,W,CGardens
+CGardens4,,,,S,CGardens3
+CGardens4,,,,W,CGardens2
+Resources,,,,E,End
