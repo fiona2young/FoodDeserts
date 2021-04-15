@@ -140,8 +140,8 @@ function draw() {
     // this is a function of p5.js, not of this sketch
     drawSprite(Cam);
   } 
+      
 }
-
 // pass to adventure manager to draw/undraw events
 function keyPressed() {
   // toggle fullscreen mode
@@ -150,7 +150,6 @@ function keyPressed() {
     fullscreen(!fs);
     return;
   }
-  adventureManager.keyPressed(key);
     
   if( key === 'z' ) {
     adventureManager.keyPressed('z');
@@ -172,12 +171,12 @@ function mouseReleased() {
 
 function moveSprite() {
   if(keyIsDown(RIGHT_ARROW)) {
-    if(adventureManager.getStateName() == "Learning" && 
-      adventureManager.getStateName() == "LearningC" && 
-      adventureManager.getStateName() == "Learning2" && 
-      adventureManager.getStateName() == "Learning2C" && 
-      adventureManager.getStateName() == "SolutionSelect" && 
-      adventureManager.getStateName() == "Resources" && 
+    if( adventureManager.getStateName() == "Learning" | 
+      adventureManager.getStateName() == "LearningC" | 
+      adventureManager.getStateName() == "Learning2" | 
+      adventureManager.getStateName() == "Learning2C" | 
+      adventureManager.getStateName() == "SolutionSelect" | 
+      adventureManager.getStateName() == "Resources" | 
       adventureManager.getStateName() == "End" )
         {
           Cam.changeAnimation('CamBwalk');
@@ -191,12 +190,12 @@ function moveSprite() {
     }
   }
   else if(keyIsDown(LEFT_ARROW)) {
-    if(adventureManager.getStateName() == "Learning" && 
-      adventureManager.getStateName() == "LearningC" && 
-      adventureManager.getStateName() == "Learning2" && 
-      adventureManager.getStateName() == "Learning2C" && 
-      adventureManager.getStateName() == "SolutionSelect" && 
-      adventureManager.getStateName() == "Resources" && 
+    if(adventureManager.getStateName() == "Learning" | 
+      adventureManager.getStateName() == "LearningC" | 
+      adventureManager.getStateName() == "Learning2" | 
+      adventureManager.getStateName() == "Learning2C" | 
+      adventureManager.getStateName() == "SolutionSelect" | 
+      adventureManager.getStateName() == "Resources" | 
       adventureManager.getStateName() == "End" )
         {
           Cam.changeAnimation('CamBwalk');
@@ -206,16 +205,16 @@ function moveSprite() {
     else {
       Cam.changeAnimation('CamSwalk');
       Cam.mirrorX(-1);
-      Cam.velocity.x = 4;
+      Cam.velocity.x = -4;
     }
   }
   else if(keyIsDown(DOWN_ARROW)) {
-    if(adventureManager.getStateName() == "Learning" && 
-      adventureManager.getStateName() == "LearningC" && 
-      adventureManager.getStateName() == "Learning2" && 
-      adventureManager.getStateName() == "Learning2C" && 
-      adventureManager.getStateName() == "SolutionSelect" && 
-      adventureManager.getStateName() == "Resources" && 
+    if(adventureManager.getStateName() == "Learning" | 
+      adventureManager.getStateName() == "LearningC" | 
+      adventureManager.getStateName() == "Learning2" | 
+      adventureManager.getStateName() == "Learning2C" | 
+      adventureManager.getStateName() == "SolutionSelect" | 
+      adventureManager.getStateName() == "Resources" | 
       adventureManager.getStateName() == "End" )
         {
           Cam.changeAnimation('CamBstand');
@@ -224,16 +223,17 @@ function moveSprite() {
     else {
       Cam.changeAnimation('CamSwalk');
       Cam.mirrorX(1);
-      Cam.velocity.x = 4;
+      Cam.velocity.x = 0;
+      Cam.velocity.y = 4;
     }
   }
   else if(keyIsDown(UP_ARROW)) {
-    if(adventureManager.getStateName() == "Learning" && 
-      adventureManager.getStateName() == "LearningC" && 
-      adventureManager.getStateName() == "Learning2" && 
-      adventureManager.getStateName() == "Learning2C" && 
-      adventureManager.getStateName() == "SolutionSelect" && 
-      adventureManager.getStateName() == "Resources" && 
+    if(adventureManager.getStateName() == "Learning" | 
+      adventureManager.getStateName() == "LearningC" | 
+      adventureManager.getStateName() == "Learning2" | 
+      adventureManager.getStateName() == "Learning2C" | 
+      adventureManager.getStateName() == "SolutionSelect" | 
+      adventureManager.getStateName() == "Resources" | 
       adventureManager.getStateName() == "End" )
         {
           Cam.changeAnimation('CamBstand');
@@ -242,16 +242,17 @@ function moveSprite() {
     else {
       Cam.changeAnimation('CamSwalk');
       Cam.mirrorX(1);
-      Cam.velocity.x = 4;
+      Cam.velocity.x = 0;
+      Cam.velocity.y = -4;
     }
   }
   else {
-    if(adventureManager.getStateName() == "Learning" && 
-      adventureManager.getStateName() == "LearningC" && 
-      adventureManager.getStateName() == "Learning2" && 
-      adventureManager.getStateName() == "Learning2C" && 
-      adventureManager.getStateName() == "SolutionSelect" && 
-      adventureManager.getStateName() == "Resources" && 
+    if(adventureManager.getStateName() == "Learning" | 
+      adventureManager.getStateName() == "LearningC" | 
+      adventureManager.getStateName() == "Learning2" | 
+      adventureManager.getStateName() == "Learning2C" | 
+      adventureManager.getStateName() == "SolutionSelect" | 
+      adventureManager.getStateName() == "Resources" | 
       adventureManager.getStateName() == "End" )
         {
           Cam.changeAnimation('CamBstand');
@@ -286,6 +287,7 @@ clickableButtonHover = function () {
 // leave as is when mouse off
 clickableButtonOnOutside = function () {
   this.color = "#F7F7F7";
+  cursor(ARROW);
 }
 
 clickableButtonPressed = function() {
