@@ -18,6 +18,9 @@ var clickables;
  // p5.play
 var Cam;
 var sizeChange;
+var seeds;
+var trash;
+var intros;
 
  // indexes into the clickable array (constants)
 const playGameIndex = 0;
@@ -64,6 +67,58 @@ function setup() {
     
   // setup additional info about p5.clickables
   setupClickables();
+    
+  seeds = new Group();
+  trash = new Group();
+  intros = new Group();
+    
+  //collectables
+//  for(var i=0; i<4; i++) {
+//    var seed1 = createSprite(,);
+//    seed1.addAnimation('normal', 'assets/nSeeds.png');
+//    seeds.add(seed1);
+//      
+//    var seed2 = createSprite(,);
+//    seed2.addAnimation('normal', 'assets/bSeeds.png');
+//    seeds.add(seed2);
+//      
+//    var seed3 = createSprite(,);
+//    seed3.addAnimation('normal', 'assets/gSeeds.png');
+//    seeds.add(seed3);
+//      
+//    var seed4 = createSprite(,);
+//    seed4.addAnimation('normal', 'assets/nSeeds.png');
+//    seeds.add(seed4);
+//      
+//    var seed5 = createSprite(,);
+//    seed5.addAnimation('normal', 'assets/bSeeds.png');
+//    seeds.add(seed5);
+//     
+//    
+//    var trash1 = createSprite(,);
+//    trash1.addAnimation('normal', 'assets/tire.png');
+//    trash.add(trash1);
+//      
+//    var trash2 = createSprite(,);
+//    trash2.addAnimation('normal', 'assets/cans.png');
+//    trash.add(trash2);
+//      
+//    var trash3 = createSprite(,);
+//    trash3.addAnimation('normal', 'assets/plastic.png');
+//    trash.add(trash3);
+//      
+//    var trash3 = createSprite(,);
+//    trash3.addAnimation('normal', 'assets/tire.png');
+//    trash.add(trash3);
+//      
+//    var trash4 = createSprite(,);
+//    trash4.addAnimation('normal', 'assets/cans.png');
+//    trash.add(trash4);
+//      
+//    var trash5 = createSprite(,);
+//    trash5.addAnimation('normal', 'assets/plastic.png');
+//    trash.add(trash5);
+//  }
 }
 
 
