@@ -151,12 +151,20 @@ function keyPressed() {
     return;
   }
   adventureManager.keyPressed(key);
+    
+  if( key === 'z' ) {
+    adventureManager.keyPressed('z');
+  }
 }
 
-function keyTyped() {
-  if( key === 'z' ) {
-    adventureManager.keyTyped(z);
-  }
+//function keyTyped() {
+//  if( key === 'z' ) {
+//    adventureManager.keyTyped('z');
+//  }
+//}
+
+function mouseReleased() {
+  adventureManager.mouseReleased();
 }
 
    
