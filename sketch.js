@@ -3,11 +3,12 @@ Food Deserts
   by Fiona Young
 Overview
 Food Deserts, the interactive game, gives users the
-opportunity to navigate around a community that provides
-tidbits of information surrounding the definition,
-causes, and effects of food deserts. The ending provides
-a short demonstration of a solution for combating the
-issue, as well as external reads and assistance.
+opportunity to navigate around a fictional community
+that provides tidbits of information surrounding the
+definition, causes, and effects of food deserts. The
+ending provides a short demonstration of a solution
+for combating the issue, as well as external reads
+and assistance.
 
 Notes:
 (1) Uses the p5.2DAdventure class by Scott Kildall,
