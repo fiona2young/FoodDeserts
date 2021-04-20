@@ -124,9 +124,9 @@ function setup() {
   RIntro.addAnimation('normal', 'assets/RIntro.png');
     
   // collectables for seeds and trash on CGardens
-//  seed1 = createSprite(250,250);
-//  seed1.addAnimation('normal', 'assets/nSeeds.png');
-//  trash.add(seed1);
+  seed1 = createSprite(250,250);
+  seed1.addAnimation('normal', 'assets/nSeeds.png');
+  trash.add(seed1);
 
   seed2 = createSprite(400,300);
   seed2.addAnimation('normal', 'assets/bSeeds.png');
@@ -352,11 +352,6 @@ function draw() {
 
   // draw p5.clickables
   clickablesManager.draw();
-    
-  // text draw details
-  fill(255);
-  textFont(mulishFont);
-  textSize(22);
     
   // no avatar for select screens
   if( adventureManager.getStateName() !== "Splash" && 
